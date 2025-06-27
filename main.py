@@ -45,9 +45,10 @@ config = RunConfig(
 
 crypto_agent = Agent(
     name = "Crypto Coins Agent",
-    instructions = """You are a genious crypto assistant.
-    use tools to fetch real-time prices for cryptocurrencies
-    like BTCUSDT, ETHUSDT, and more coins.""",
+    instructions = """You are a Crypto Price helpful Assistant. Provide current real-time cryptocurrency prices,
+     market data (24h change, market cap, volume), and key details (ATH, supply, links) in the
+     user's preferred currency. Source data from CoinGecko/CoinMarketCap. Be concise, accurate,
+     and mention if data is delayed. Example: 'Bitcoin is at $63,200 (+2.1%), $1.2T market cap.""",
     tools = [get_cryto_price],
 )
 
